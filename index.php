@@ -11,6 +11,7 @@
 		<title>RepeaterCreeper</title>
 
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"
 	</head>
 
 	<body>
@@ -24,7 +25,7 @@
 				</div>
 				<div class="card-footer">
 					<div class="form-group">
-						<input class="btn btn-primary btn-block" value="Generate Command" name="submitDataContent" onClick="generateCommand()">
+						<input class="btn btn-primary btn-block" value="Generate Command" name="submitDataContent" id="generate" onClick="generateCommand()">
 					</div>
 				</div>
 			</div>
@@ -37,20 +38,7 @@
 
 		<script src="js/jquery.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<script type="text/javascript">
-			function generateCommand() {
-				var storeData = "";
-
-				keyEnv = $("#dataContent").val().split("\n");
-
-				keyEnv.forEach(function(index, data){
-					storeData += " " + index
-				});
-
-				$("#outputCommand").text("heroku config:set " + storeData);
-
-				$("#dataContent").val('');
-			}
+		<script type="text/javascript" src="js/generate.js">	
 		</script>
 	</body>
 </html>
