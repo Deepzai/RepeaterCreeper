@@ -6,7 +6,7 @@ function generateCommand() {
 	keyEnv = dataContent.split("\n");
     if (dataContent.toLowerCase().includes("key")) { 
     	keyEnv.forEach(function(index){
-    		storeData = storeData.concat(index);
+    		storeData = storeData.concat(index + " ");
 	    });
     } else {
         output = "Please make sure you entered your .ENV file in correctly." + "<br>" +
